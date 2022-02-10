@@ -1,0 +1,70 @@
+{ 
+    "data": [
+        {
+            "id": 1,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        },
+        {
+            "id": 2,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        },
+        {
+            "id": 3,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        },
+        {
+            "id": 4,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        },
+        {
+            "id": 5,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        },
+        {
+            "id": 6,
+            "name": "Jordan 11 Retro Cool Grey (2021)",
+            "styleID": "CT8012-005",
+            "size": 40,
+            "desiredReturn": 0.17,
+            "condition": "Good Condition",
+            "buyDate": "2022-02-09",
+            "buyPrice": 225.0,
+            "status": "Unlisted"
+        }
+    ]
+} 
