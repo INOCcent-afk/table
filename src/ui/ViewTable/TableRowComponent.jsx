@@ -38,6 +38,7 @@ export default TableRowComponent;
 
 const StyledTR = styled.tr`
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
@@ -53,6 +54,7 @@ const StyledTD = styled.td`
   font-weight: bold;
   border-right: 1px solid ${(props) => props.theme.colors.lightGray};
   white-space: unset;
+  color: ${(props) => props.theme.colors.primary};
 
   @media ${(props) => props.theme.mediaQueries.laptop} {
     white-space: nowrap;

@@ -7,6 +7,9 @@ import {
   gray20,
   gray10,
   blueViolet20,
+  mediumVioletRed,
+  pink,
+  darkVioletRed,
 } from "./colors";
 
 const breakpoints = ["320px", "768px", "1024px", "1200px", "1440px"];
@@ -21,8 +24,10 @@ export const theme = {
     black: black,
     white: white,
     transparent: transparent,
-    primary: blueViolet,
-    secondary: ghostWhite,
+    primary: mediumVioletRed,
+    secondary: pink,
+
+    darkVioletRed,
 
     blueViolet20,
 

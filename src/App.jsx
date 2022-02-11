@@ -13,6 +13,5 @@ export default App;
 
 const StyledApp = styled.div`
   padding: 20px;
-  background-color: ${(props) => props.theme.colors.secondary}
   height: 100vh;
 `;

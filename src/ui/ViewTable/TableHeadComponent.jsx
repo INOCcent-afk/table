@@ -30,7 +30,11 @@ const TableHeadComponent = ({
 
   return (
     <StyledTH className={additionalClassNames} onClick={handleDropdown}>
-      <StyledTHContent>
+      <StyledTHContent
+        className={`tabledHeadContent ${
+          checkbox && "justify-center-important"
+        }`}
+      >
         {title && <p>{title}</p>}
         {menu && <MenuIcon />}
         {checkbox && <CheckBox />}
@@ -46,12 +50,14 @@ export default TableHeadComponent;
 
 const StyledTH = styled.th`
   padding: 10px 40px;
+  color: ${(props) => props.theme.colors.darkVioletRed};
   background-color: ${(props) => props.theme.colors.secondary};
   position: relative;
   white-space: nowrap;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.blueViolet20};
+    background-color: ${(props) => props.theme.colors.secondary}90;
   }
 `;
 

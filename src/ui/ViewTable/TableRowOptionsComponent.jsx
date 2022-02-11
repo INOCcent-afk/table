@@ -49,8 +49,7 @@ const TableRowOptionsComponent = ({ toggle }) => {
 export default TableRowOptionsComponent;
 
 const StyledTROptionsContainer = styled.tr`
-  borrder-collapse: unset;
-  background-color: ${(props) => props.theme.colors.secondary};
+  border-collapse: unset;
   td {
     padding: 0;
   }

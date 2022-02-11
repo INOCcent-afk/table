@@ -3,7 +3,13 @@ import styled from "styled-components";
 
 const DropdownMenu = ({ items, top, left, bottom, right }) => {
   return (
-    <StyledDropdownMenu top={top} left={left} bottom={bottom} right={right}>
+    <StyledDropdownMenu
+      className="dropdownMenu"
+      top={top}
+      left={left}
+      bottom={bottom}
+      right={right}
+    >
       {items.map((item) => (
         <StyledDropdownMenuItem key={item.text}>
           <p>{item.text}</p>
@@ -36,12 +42,13 @@ const StyledDropdownMenuItem = styled.div`
   padding: 0px 30px;
   font-size: 14px;
   font-weight: bold;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.darkVioletRed};
   white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  transition: all 0.2s ease-in-out;
 
   &:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
@@ -49,5 +56,6 @@ const StyledDropdownMenuItem = styled.div`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.mildGray};
+    color: ${(props) => props.theme.colors.primary};
   }
 `;

@@ -102,7 +102,6 @@ const StyledTable = styled.table`
 const StyledTableHeadContainer = styled.thead`
   white-space: nowrap;
   cursor: pointer;
-  color: ${(props) => props.theme.colors.primary};
 
   p {
     font-weight: bold;
