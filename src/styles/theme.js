@@ -1,6 +1,4 @@
 import {
-  blueViolet,
-  ghostWhite,
   black,
   transparent,
   white,
@@ -11,6 +9,9 @@ import {
   pink,
   darkVioletRed,
 } from "./colors";
+
+// blueViolet,
+// ghostWhite,
 
 const breakpoints = ["320px", "768px", "1024px", "1200px", "1440px"];
 
