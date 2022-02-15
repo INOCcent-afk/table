@@ -1,0 +1,58 @@
+{ 
+    "data": [
+        {
+            "id": 1,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        },
+        {
+            "id": 2,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        },
+        {
+            "id": 3,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        },
+        {
+            "id": 4,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        },
+        {
+            "id": 5,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        },
+        {
+            "id": 6,
+            "item": "Yeezy",
+            "store": "BannedLA",
+            "price": 200,
+            "payout": 180,
+            "status": "Paid",
+            "Payout Info": "Check - 1/24/22"
+        }
+    ]
+} 

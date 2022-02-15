@@ -29,7 +29,7 @@ const headerMenuDropdown = [
   },
 ];
 
-const TableHeaderComponent = () => {
+const TableHeaderComponent = ({ consignmentScreen }) => {
   const [dropdown, setDropdown] = useState(false);
   const search = useSelector((state) => state.tableView.search);
   const dispatch = useDispatch();
@@ -44,28 +44,35 @@ const TableHeaderComponent = () => {
 
   return (
     <StyledHeader>
-      <StyledDesktopView>
-        <RefreshIcon fill={white} />
-        <DownloadIcon fill={white} />
-        <FilterIcon fill={white} />
-        <SearchInput
-          placeholder="Search..."
-          onChange={(e) => handleInput(e)}
-          value={search}
-        />
-        <Button text="List All" />
-      </StyledDesktopView>
-      <StyledMobileView>
-        <StyledMenuContainer onClick={handleDropdown}>
+      <StyledHeaderContent>
+        <div className="relative" onClick={handleDropdown}>
           <MenuIcon color={white} width={40} height={40} />
           {dropdown && <DropdownMenu items={headerMenuDropdown} left={0} />}
-        </StyledMenuContainer>
-        <SearchInput
-          placeholder="Search..."
-          onChange={(e) => handleInput(e)}
-          value={search}
-        />
-      </StyledMobileView>
+        </div>
+        {consignmentScreen && (
+          <StyledAdditionalItems>
+            <StyledCol>
+              <h3>Total Sales</h3>
+              <span>0.01</span>
+            </StyledCol>
+            <StyledCol>
+              <h3>Total Sales</h3>
+              <span>0.01</span>
+            </StyledCol>
+          </StyledAdditionalItems>
+        )}
+        <StyledHeaderRightNav>
+          <RefreshIcon className="hidden-xs block-lg" fill={white} />
+          <DownloadIcon className="hidden-xs block-lg" fill={white} />
+          <FilterIcon className="hidden-xs block-lg" fill={white} />
+          <SearchInput
+            placeholder="Search..."
+            onChange={(e) => handleInput(e)}
+            value={search}
+          />
+          <Button className="hidden-xs block-lg" text="List All" />
+        </StyledHeaderRightNav>
+      </StyledHeaderContent>
     </StyledHeader>
   );
 };
@@ -83,26 +90,41 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledDesktopView = styled.div`
-  display: none;
-
-  @media ${(props) => props.theme.mediaQueries.laptop} {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
-  }
-`;
-
-const StyledMobileView = styled(StyledDesktopView)`
-  justify-content: space-between;
-  display: flex;
-
-  @media ${(props) => props.theme.mediaQueries.laptop} {
-    display: none;
-  }
-`;
-
-const StyledMenuContainer = styled.div`
+const StyledHeaderContent = styled.div`
+  flex-wrap: wrap;
   position: relative;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media ${(props) => props.theme.mediaQueries.laptop} {
+    flex-wrap: unset;
+  }
+`;
+
+const StyledAdditionalItems = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+`;
+
+const StyledCol = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+
+  h3 {
+    margin: 0;
+    white-space: nowrap;
+  }
+`;
+
+const StyledHeaderRightNav = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
 `;

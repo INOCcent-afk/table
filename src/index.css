@@ -30,6 +30,8 @@ code {
   .cell-lg { display: table-cell; }
 
   .hidden-lg { display: none; }
+
+  .block-lg { display: block; }
 }
 
 

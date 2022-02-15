@@ -2,29 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import TableHeadComponent from "./TableHeadComponent";
 import TableRowComponent from "./TableRowComponent";
-import MockDataJson from "../../utils/MockData.json";
 import TableHeaderComponent from "./TableHeaderComponent";
 import RippleLoader from "../loaders/RippleLoader";
 import { useSelector } from "react-redux";
 
-const headsDesktop = [
-  "NAME",
-  "SKU/STYLE ID",
-  "SIZE",
-  "DESIRED RETURN",
-  "CONDITION",
-  "BUY DATE",
-  "BUY PRICE",
-  "STATUS",
-];
-
-const headsMobile = ["NAME"];
-
-const TableComponent = () => {
+const TableComponent = ({
+  headsDesktop,
+  headsMobile,
+  mockData,
+  ConsignmentScreen,
+  InventoryScreen,
+}) => {
   const search = useSelector((state) => state.tableView.search);
   return (
     <div className="relative">
-      <TableHeaderComponent />
+      <TableHeaderComponent consignmentScreen={ConsignmentScreen} />
       <StyledTableContainer>
         <StyledTable cellSpacing={0}>
           <StyledTableHeadContainer>
@@ -49,8 +41,13 @@ const TableComponent = () => {
             </tr>
           </StyledTableHeadContainer>
           <tbody>
-            {MockDataJson.data.map((data) => (
-              <TableRowComponent key={data.id} props={data} />
+            {mockData.data.map((data) => (
+              <TableRowComponent
+                InventoryScreen={InventoryScreen}
+                ConsignmentScreen={ConsignmentScreen}
+                key={data.id}
+                props={data}
+              />
             ))}
           </tbody>
         </StyledTable>

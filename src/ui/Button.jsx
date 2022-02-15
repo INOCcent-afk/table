@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Button = ({ text }) => {
-  return <StyledButton>{text}</StyledButton>;
+const Button = ({ text, ...props }) => {
+  return <StyledButton {...props}>{text}</StyledButton>;
 };
 
 export default Button;
